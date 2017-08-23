@@ -70,3 +70,7 @@ Edit ```ffm-server/config.json```, and add it in first brace "```{}```" also:
 ```
 
 Run ```node node/index.js```, enjoy it!
+
+### Nginx
+
+**Waiting for Perl Nginx module finish**
