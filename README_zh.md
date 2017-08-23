@@ -71,8 +71,8 @@ Verifying - Password:
 编辑 ```config.json```，然后添加如下内容至第一个括号“```{}```”内：
 ```json
 	"https": {
-			"key": "/path/to/privkey.pem",
-			"cert": "/path/to/fullchain.pem"
+			"key": "<证书私钥路径>",
+			"cert": "<含完整证书链证书（fullchain）>"
 		}
 ```
 
