@@ -5,9 +5,9 @@ Design for Android 7.0+ specially, full use Android notification feature (Reply 
 [简体中文](/README_zh.md)
 
 # Getting Startted
-[Noob](#noob)
+[Noob](#Noob)
 
-[Geek](#geek)
+[Geek](#Geek)
 
 # Noob
 Just input one command, and anwser some question. Enjoy!
@@ -20,9 +20,9 @@ FFM is depending on Mojo-Webqq, you need install it at first.
 [Read installtion guide of Mojo-Webqq.](https://github.com/sjdy521/Mojo-Webqq)
 
 ## Which is you
-[Node.js user](#node.js)
+[Node.js user](#Node.js)
 
-[Nginx user](#nginx)
+[Nginx user](#Nginx)
 
 ## Node.js
 We recommend use Node.js, you need [install Node.js](https://nodejs.org/en/download/package-manager) at first.
