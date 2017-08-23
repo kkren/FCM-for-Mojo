@@ -4,7 +4,7 @@ Design for Android 7.0+ specially, full use Android notification feature (Reply 
 
 [简体中文](/README_zh.md)
 
-# Getting Startted
+# Getting Started
 [Noob](#Noob)
 
 [Geek](#Geek)
