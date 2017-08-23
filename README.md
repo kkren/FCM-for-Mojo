@@ -4,6 +4,7 @@ Design for Android 7.0+ specially, full use Android notification feature (Reply 
 
 # Getting Startted
 [Noob]
+
 [Geek]
 
 # Noob
@@ -18,10 +19,14 @@ FFM is depending on Mojo-Webqq, you need install it at first.
 
 ## Which is you
 [Node.js user]
+
 [Nginx user]
+
 [None of that]
 
 ### Node.js
+We recommend use Node.js, you need [install Node.js] at first.
+
 Get server cilent files by git. And then, runing node.
 ```Shell
 git clone https://github.com/RikkaW/FCM-for-Mojo.git && mv FCM-for-Mojo/server ffm-server
@@ -30,7 +35,7 @@ cd ffm-server && node node/index.js
 Congratulation, you run a basic server just now!
 But that's not finished yet, we need something to protect your messages.
 
-## HTTP Basic Authorization
+### HTTP Basic Authorization
 Generate a password with openssl:
 ```Shell
 $ openssl passwd
@@ -52,6 +57,7 @@ Edit ```config.json```, add it in first brace "```{}```":
 		"file": "/path/to/passwd"
 	},
 }
+```
 
 Open server settings in FFM cilent, edit server URL and click "show advanced options".
 Then, input the username and password and click "OK".
