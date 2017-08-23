@@ -24,7 +24,7 @@ FFM is depending on Mojo-Webqq, you need install it at first.
 
 [Nginx user](#nginx)
 
-### Node.js
+## Node.js
 We recommend use Node.js, you need [install Node.js](https://nodejs.org/en/download/package-manager) at first.
 
 Get server cilent files by git. And then, runing node.
@@ -37,7 +37,7 @@ cd ffm-server && node node/index.js
 Congratulation, you run a basic server just now!
 But that's not finished yet, we need something to protect your messages.
 
-#### HTTP Basic Authorization
+### HTTP Basic Authorization
 Generate a password with openssl:
 
 ```Shell
@@ -67,7 +67,7 @@ Edit ```config.json```, add it in first brace "```{}```":
 Open server settings in FFM cilent, edit server URL and click "show advanced options".
 Then, input the username and password and click "OK".
 
-#### HTTPS
+### HTTPS
 Attention, you need **SSL certificates** to set up HTTPS.
 Edit ```ffm-server/config.json```, and add it in first brace "```{}```" also:
 ```
@@ -82,6 +82,6 @@ Edit ```ffm-server/config.json```, and add it in first brace "```{}```" also:
 
 Run ```node node/index.js```, enjoy it!
 
-### Nginx
+## Nginx
 
 *Waiting for Perl Nginx module finish*
