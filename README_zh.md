@@ -1,10 +1,12 @@
 # FCM for Mojo
 借助 [Mojo-WebQQ](https://github.com/sjdy521/Mojo-Webqq) 实现将 QQ 消息通过 Firebase Cloud Messaging (FCM) 推送至 Android 设备。
 专为 Android 7.0 以上设计，充分利用 Android 通知特性（直接回复，捆绑通知等）。
+
 [English](/README.md)
 
 # 入门
 [小白](#小白)
+
 [极客](#极客)
 
 # 小白
@@ -55,12 +57,9 @@ Verifying - Password:
 
 编辑 ```config.json```，添加如下内容至第一个括号“```{}```”内：
 ```json
-{
-	#...#
 	"basic_auth": {
 		"file": "<密码文件路径>"
 	},
-}
 ```
 
 打开 FFM 客户端中的服务器设置，点击服务器地址并勾选“显示高级选项”。
@@ -71,13 +70,10 @@ Verifying - Password:
 
 编辑 ```config.json```，然后添加如下内容至第一个括号“```{}```”内：
 ```json
-{
-	#...#
 	"https": {
 			"key": "/path/to/privkey.pem",
 			"cert": "/path/to/fullchain.pem"
 		}
-}
 ```
 
 运行 ```node node/index.js```，享受 FFM！
