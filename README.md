@@ -10,24 +10,27 @@ Design for Android 7.0+ specially, full use Android notification feature (Reply 
 [Geek](#Geek)
 
 # Noob
-Just input one command, and anwser some question. Enjoy!
+Just input one command, and anwser some question.
 
 *Waiting @kotomei build Dockerfile*
+
+Enjoy FFM!
 
 # Geek
 ## Mojo-Webqq
 FFM is depending on Mojo-Webqq, you need install it at first.
 [Read installtion guide of Mojo-Webqq.](https://github.com/sjdy521/Mojo-Webqq)
 
-## Which is you
+## You are...
 [Node.js user](#Node.js)
 
 [Nginx user](#Nginx)
 
 ## Node.js
-We recommend use Node.js, you need [install Node.js](https://nodejs.org/en/download/package-manager) at first.
+We recommend use Node.js.
 
-Get server cilent files by git. And then, runing node.
+You need [install Node.js](https://nodejs.org/en/download/package-manager) at first to cotinue.
+And get server cilent files by git. Then, runing node.
 
 ```Shell
 git clone https://github.com/RikkaW/FCM-for-Mojo.git && mv FCM-for-Mojo/server ffm-server
@@ -55,33 +58,32 @@ Copy MD5 and create a file with:
 
 Edit ```config.json```, add it in first brace "```{}```":
 
-```
-{
-	#...#
+```json
 	"basic_auth": {
 		"file": "/path/to/passwd"
 	},
-}
 ```
-
-Open server settings in FFM cilent, edit server URL and click "show advanced options".
-Then, input the username and password and click "OK".
 
 ### HTTPS
 Attention, you need **SSL certificates** to set up HTTPS.
 Edit ```ffm-server/config.json```, and add it in first brace "```{}```" also:
-```
-{
-	#...#
+```json
 	"https": {
 			"key": "/path/to/privkey.pem",
 			"cert": "/path/to/fullchain.pem"
 		}
-}
 ```
 
-Run ```node node/index.js```, enjoy it!
+Run ```node node/index.js```. FFM server running now!
+Next step: [configure your FFM cilent](#Cilent).
 
 ## Nginx
 
 *Waiting for Perl Nginx module finish*
+
+# Cilent
+After FFM server started, you need configure your cilent.
+Open FFM, click "Server settings. Then, click "Server URL".
+Input server URL and click "show advanced option", input username and password. Click "OK" when you finish.
+Back to last interface, click "Manage devices". Then, click "+" button at upper right corner.
+Click "upload", done!
