@@ -32,9 +32,9 @@ FFM 依赖于 Mojo Webqq，所以你必须先安装好它。
 
 ## Node.js
 我们推荐使用 Node.js。
-你需要先[安装 Node.js](https://nodejs.org/en/download/package-manager) 才能继续。
 
-用 Git 获取客户端文件，然后运行 node：
+你需要先[安装 Node.js](https://nodejs.org/en/download/package-manager)。
+然后 Git 获取客户端文件，运行 node：
 
 ```Shell
 git clone https://github.com/RikkaW/FCM-for-Mojo.git && mv FCM-for-Mojo/server ffm-server
