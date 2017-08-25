@@ -10,9 +10,11 @@ import android.util.Log;
 import java.util.UUID;
 
 import moe.shizuku.fcmformojo.FFMSettings.ForegroundImpl;
+import moe.shizuku.fcmformojo.api.FFMService;
+import moe.shizuku.fcmformojo.api.OpenQQService;
 import moe.shizuku.fcmformojo.interceptor.HttpBasicAuthorizationInterceptor;
 import moe.shizuku.fcmformojo.notification.NotificationBuilder;
-import moe.shizuku.fcmformojo.profile.Profile;
+import moe.shizuku.fcmformojo.utils.URLFormatUtils;
 import moe.shizuku.fcmformojo.utils.UsageStatsUtils;
 import moe.shizuku.privileged.api.PrivilegedAPIs;
 import moe.shizuku.privileged.api.receiver.TokenUpdateReceiver;
@@ -30,9 +32,11 @@ import static moe.shizuku.fcmformojo.FFMSettings.GET_FOREGROUND;
 
 public class FFMApplication extends Application {
 
-    private NotificationBuilder mNotificationBuilder;
-    private Retrofit mRetrofit;
-    private Retrofit mRxRetrofit;
+    private static NotificationBuilder sNotificationBuilder;
+    private static Retrofit sRxRetrofit;
+
+    public static OpenQQService OpenQQService;
+    public static FFMService FFMService;
 
     public static PrivilegedAPIs sPrivilegedAPIs;
 
@@ -44,67 +48,64 @@ public class FFMApplication extends Application {
         return (FFMApplication) context.getApplicationContext();
     }
 
-    public static Retrofit getRetrofit(Context context) {
-        return FFMApplication.get(context).mRetrofit;
-    }
+    public static void updateBaseUrl(String url) {
+        url = URLFormatUtils.addEndSlash(url);
 
-    public static Retrofit getRxRetrofit(Context context) {
-        return FFMApplication.get(context).mRxRetrofit;
-    }
-
-    public static void updateBaseUrl(Context context, String url) {
-        FFMApplication application = FFMApplication.get(context);
-
-        application.mRetrofit = application.mRetrofit.newBuilder()
+        sRxRetrofit = sRxRetrofit
+                .newBuilder()
                 .baseUrl(url)
                 .build();
 
-        application.mRxRetrofit = application.mRxRetrofit.newBuilder()
-                .baseUrl(url)
-                .build();
+        createServices(sRxRetrofit);
     }
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
+    private static void createRetrofit(String baseUrl) {
+        if (!URLFormatUtils.isValidURL(baseUrl)) {
+            baseUrl = "http://0.0.0.0/";
+        }
 
-        Settings.init(this);
-
-        mMainHandler = new Handler(getMainLooper());
-
-        mNotificationBuilder = new NotificationBuilder(this);
+        baseUrl = URLFormatUtils.addEndSlash(baseUrl);
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .addInterceptor(new HttpBasicAuthorizationInterceptor())
                 .build();
 
-        mRetrofit = new Retrofit.Builder()
-                .baseUrl(FFMSettings.getBaseUrl())
-                .addConverterFactory(GsonConverterFactory.create())
-                .client(okHttpClient)
-                .build();
-
-        mRxRetrofit = new Retrofit.Builder()
-                .baseUrl(FFMSettings.getBaseUrl())
+        sRxRetrofit = new Retrofit.Builder()
+                .baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(okHttpClient)
                 .build();
+    }
 
-        try {
-            mIsSystem = (getPackageManager().getApplicationInfo(getPackageName(), 0).flags & ApplicationInfo.FLAG_SYSTEM) != 0;
-        } catch (PackageManager.NameNotFoundException ignored) {
+    private static void createServices() {
+        createServices(sRxRetrofit);
+    }
+
+    private static void createServices(Retrofit retrofit) {
+        if (retrofit == null) {
+            createRetrofit(FFMSettings.getBaseUrl());
+            retrofit = sRxRetrofit;
+        }
+
+        OpenQQService = retrofit.create(OpenQQService.class);
+        FFMService = retrofit.create(FFMService.class);
+    }
+
+    private static void initShizuku(Context context) {
+        if (sPrivilegedAPIs == null) {
+            return;
         }
 
         PrivilegedAPIs.setPermitNetworkThreadPolicy();
 
         sPrivilegedAPIs = new PrivilegedAPIs(FFMSettings.getToken());
         if (!sPrivilegedAPIs.authorized()) {
-            if (!PrivilegedAPIs.installed(this)) {
+            if (!PrivilegedAPIs.installed(context)) {
                 return;
             }
 
-            UUID token = sPrivilegedAPIs.requestToken(this);
+            UUID token = sPrivilegedAPIs.requestToken(context);
             if (token != null) {
                 FFMSettings.putToken(token);
 
@@ -113,7 +114,7 @@ public class FFMApplication extends Application {
                 Settings.putString(GET_FOREGROUND, "disable");
             }
         }
-        sPrivilegedAPIs.registerTokenUpdateReceiver(this, new TokenUpdateReceiver() {
+        sPrivilegedAPIs.registerTokenUpdateReceiver(context, new TokenUpdateReceiver() {
             @Override
             public void onTokenUpdate(Context context, UUID token) {
                 FFMSettings.putToken(token);
@@ -125,12 +126,33 @@ public class FFMApplication extends Application {
         });
     }
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        mMainHandler = new Handler(getMainLooper());
+
+        sNotificationBuilder = new NotificationBuilder(this);
+
+        try {
+            mIsSystem = (getPackageManager().getApplicationInfo(getPackageName(), 0).flags & ApplicationInfo.FLAG_SYSTEM) != 0;
+        } catch (PackageManager.NameNotFoundException ignored) {
+        }
+
+        FFMSettings.init(this);
+
+        createRetrofit(FFMSettings.getBaseUrl());
+        createServices();
+
+        initShizuku(this);
+    }
+
     public void runInMainThread(Runnable runnable) {
         mMainHandler.post(runnable);
     }
 
     public NotificationBuilder getNotificationBuilder() {
-        return mNotificationBuilder;
+        return sNotificationBuilder;
     }
 
     public String getForegroundPackage() {
