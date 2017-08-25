@@ -1,6 +1,7 @@
 # FCM for Mojo
 Push QQ Messages to Android devices with [Mojo-WebQQ](https://github.com/sjdy521/Mojo-Webqq).
-Design for Android 7.0+ specially, full use Android notification feature (Reply in notification and bundled notifications, etc.)
+Design for Android 7.0+ specially, full use Android notification feature
+(Reply in notification and bundled notifications, etc.)
 
 [简体中文](/README_zh.md)
 
@@ -10,7 +11,8 @@ Design for Android 7.0+ specially, full use Android notification feature (Reply 
 [Geek](#Geek)
 
 # Noob
-As [official installtion guilde](https://www.docker.com/community-edition), install [Docker](https://www.docker.com) by one command.
+As [official installtion guilde](https://www.docker.com/community-edition), 
+install [Docker](https://www.docker.com) by one command.
 
 ```Shell
 curl -fsSL get.docker.com -o get-docker.sh
@@ -60,9 +62,10 @@ Copy MD5 and create a file with:
 <username>:<MD5>
 ```
 
-Edit ```config.json```, add it in first brace "```{}```":
+Edit ```config.json```, finding the line with ```basic_auth```
+and del annotation (```/*``` and ```*/```) near that's line:
 
-```json
+```js
 	"basic_auth": {
 		"file": "/path/to/passwd"
 	},
@@ -70,16 +73,20 @@ Edit ```config.json```, add it in first brace "```{}```":
 
 ### HTTPS
 Attention, you need **SSL certificates** to set up HTTPS.
-Edit ```ffm-server/config.json```, and add it in first brace "```{}```" also:
-```json
+Edit ```ffm-server/config.js```, finding the line with "```https```"
+and del annotation (```/*``` and ```*/```) near that's line:
+
+```js
 	"https": {
 			"key": "/path/to/privkey.pem",
-			"cert": "/path/to/fullchain.pem"
+			/* Add ca-cert here if you have
+			"ca": "./keys/ca-cert.pem" */
+			"cert": "/path/to/fullchain-or-server-cert.pem"
 		}
 ```
 
 Run ```node node/index.js```. FFM server running now!
-Next step: [configure your FFM cilent](#Cilent).
+More usage about the config.conf in [wiki](/wiki/usage-of-config)
 
 ## Nginx
 
