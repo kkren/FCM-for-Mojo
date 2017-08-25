@@ -8,7 +8,7 @@
 Docker 更加易于安装，配置的步骤较少
 
 你需要先安装 [Docker](https://www.docker.com/)，如果还没有，
-按照[官方教程](https://www.docker.com/community-edition)，使用脚本安装 [Docker](https://www.docker.com)
+按照[官方教程](https://www.docker.com/community-edition)，使用脚本安装 [Docker](https://www.docker.com)：
 
 ```Shell
 curl -fsSL get.docker.com -o get-docker.sh
