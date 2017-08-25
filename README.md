@@ -88,7 +88,7 @@ and del annotation (```/*``` and ```*/```) near that's line:
 
 Run ```node node/index.js```. [download cilent](https://github.com/RikkaW/FCM-for-Mojo/releases) to  finish last configuration!
 
-PS: You can find out more usage about the ```config.conf``` in [wiki](https://github.com/RiikkaW/FCM-for-Mojo/wiki/usage-of-config).
+PS: You can find out more usage about the ```config.conf``` in [wiki](https://github.com/RikkaW/FCM-for-Mojo/wiki/usage-of-config).
 
 ## Nginx
 
