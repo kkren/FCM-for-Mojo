@@ -27,14 +27,7 @@ FFM is depending on Mojo-Webqq, you need install it at first.
 
 [Installtion guide](https://github.com/sjdy521/Mojo-Webqq)
 
-## You are...
-[Node.js user](#Node.js)
-
-[Nginx user](#Nginx)
-
-## Node.js
-We recommend to use Node.js.
-
+## Get server
 You need [install Node.js](https://nodejs.org/en/download/package-manager) at first.
 And get server cilent files by git. Then, runing node:
 
@@ -89,7 +82,3 @@ and del annotation (```/*``` and ```*/```) near that's line:
 Run ```node node/index.js```. [download cilent](https://github.com/RikkaW/FCM-for-Mojo/releases) to  finish last configuration!
 
 PS: You can find out more usage about the ```config.conf``` in [wiki](https://github.com/RikkaW/FCM-for-Mojo/wiki/usage-of-config).
-
-## Nginx
-
-*TODO, please install by Node.js method now*
