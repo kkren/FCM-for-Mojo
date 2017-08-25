@@ -80,9 +80,9 @@ Verifying - Password:
 		}
 ```
 
-运行 ```node node/index.js```，并下载[客户端](/releases)，完成最后的配置即可！
+运行 ```node node/index.js```，并[下载客户端](https://github.com/RikkaW/FCM-for-Mojo/releases)，完成最后的配置即可！
 
-注：你可以在 [wiki](/wiki/配置文件的用法) 中找到更多用法。
+注：你可以在 [wiki](https://github.com/RikkaW/FCM-for-Mojo/wiki/配置文件的用法) 中找到更多用法。
 
 ## Nginx
 *此坑待填，还是按照 Node.js 弄吧*
