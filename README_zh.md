@@ -24,8 +24,8 @@ FFM 依赖于 Mojo Webqq，所以你必须先[安装好 Mojo WebQQ](https://gith
 ## 获取服务端
 我们推荐使用 Node.js。
 
-你需要先[安装带 npm 的 Node.js](https://nodejs.org/en/download/package-manager) 和 git。
-然后 Git 获取客户端文件，安装依赖模块并运行 node：
+你需要先[安装带 npm 的 Node.js](https://nodejs.org/en/download/package-manager) 和 Git。
+然后用 Git 获取客户端文件，安装依赖模块并运行 node：
 
 ```Shell
 git clone https://github.com/RikkaW/FCM-for-Mojo.git && mv FCM-for-Mojo/server ffm-server
