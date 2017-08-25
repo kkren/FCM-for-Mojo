@@ -1,33 +1,28 @@
 # FCM for Mojo
-Push QQ Messages to Android devices with [Mojo-WebQQ](https://github.com/sjdy521/Mojo-Webqq).
+Push QQ Messages to Android devices according Firebase Cloud Message (FCM) with [Mojo-WebQQ](https://github.com/sjdy521/Mojo-Webqq).
 Design for Android 7.0+ specially, full use Android notification feature
 (Reply in notification and bundled notifications, etc.)
 
 [简体中文](/README_zh.md)
 
-# Getting Started
-[Noob](#Noob)
-
-[Geek](#Geek)
-
 # Noob
-As [official installtion guilde](https://www.docker.com/community-edition), 
-install [Docker](https://www.docker.com) by one command.
+You need [Docker](https://www.docker.com) installed at first.
+
+If  not, as [official installtion guilde](https://www.docker.com/community-edition), 
+install [Docker](https://www.docker.com) by script.
 
 ```Shell
 curl -fsSL get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-Then, install as [kotomei's guilde](https://github.com/kotomei/fcm-for-mojo/blob/master/README.md).
+Then, install it with [kotomei's guilde](https://github.com/kotomei/fcm-for-mojo/blob/master/README.md).
 
-# Geek
+# Step by Step
 ## Mojo-Webqq
-FFM is depending on Mojo-Webqq, you need install it at first.
+FFM is depending on Mojo-Webqq, you need install [Mojo-WebQQ](https://github.com/sjdy521/Mojo-Webqq) at first.
 
-[Installtion guide](https://github.com/sjdy521/Mojo-Webqq)
-
-## Get server
+## Get Server
 You need [install Node.js](https://nodejs.org/en/download/package-manager) at first.
 And get server cilent files by git. Then, runing node:
 
