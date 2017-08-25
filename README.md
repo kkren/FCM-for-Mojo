@@ -92,4 +92,4 @@ PS: You can find out more usage about the ```config.conf``` in [wiki](/wiki/usag
 
 ## Nginx
 
-*TODO, please install by Node.js method now```
+*TODO, please install by Node.js method now*
