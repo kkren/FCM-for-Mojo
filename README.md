@@ -5,7 +5,7 @@ Design for Android 7.0+ specially, full use Android notification feature
 
 [简体中文](/README_zh.md)
 
-# Noob
+# Docker
 You need [Docker](https://www.docker.com) installed at first.
 
 If  not, as [official installtion guilde](https://www.docker.com/community-edition), 
