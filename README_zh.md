@@ -10,7 +10,7 @@
 [极客](#极客)
 
 # 小白
-按照[官方教程](https://www.docker.com/community-edition)，一键安装 [Docker]
+按照[官方教程](https://www.docker.com/community-edition)，一键安装 [Docker](https://www.docker.com)
 
 ```Shell
 curl -fsSL get.docker.com -o get-docker.sh
