@@ -86,7 +86,7 @@ and del annotation (```/*``` and ```*/```) near that's line:
 		}
 ```
 
-Run ```node node/index.js```. download [cilent](/releases) to  finish last configuration!
+Run ```node node/index.js```. [download cilent](/releases) to  finish last configuration!
 
 PS: You can find out more usage about the ```config.conf``` in [wiki](/wiki/usage-of-config).
 
