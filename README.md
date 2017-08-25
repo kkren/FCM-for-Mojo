@@ -28,13 +28,18 @@ And get server cilent files by git. Then, runing node:
 
 ```Shell
 git clone https://github.com/RikkaW/FCM-for-Mojo.git && mv FCM-for-Mojo/server ffm-server
-cd ffm-server && node node/index.js
+rm -rf FCM-for-Mojo && cd ffm-server
+npm install http-proxy carrier
+node node/index.js
 ```
 
 Congratulation, HTTP FFM server running now at basic mode now!
 But that's not finished yet, we need something to protect your messages.
 
 ### HTTP Basic Authorization
+Install node module ```http-auth``` at first:
+```npm install http-auth```
+
 Generate a password with openssl:
 
 ```Shell
