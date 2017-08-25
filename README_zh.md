@@ -80,7 +80,7 @@ Verifying - Password:
 		}
 ```
 
-运行 ```node node/index.js```，享受 FFM！
+运行 ```node node/index.js```，并下载[客户端](/releases)，完成最后的配置即可！
 
 注：你可以在 [wiki](/wiki/配置文件的用法) 中找到更多用法。
 
