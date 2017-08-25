@@ -18,7 +18,7 @@ var config = {
     "port": 5005,
 
     // hostname, 0.0.0.0 default (IPv4)
-    // "hostname": "",
+    /*"hostname": "",*/
 
     // basic auth config, see https://github.com/http-auth/http-auth#configurations
     /*"basic_auth": {
