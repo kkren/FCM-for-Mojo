@@ -24,7 +24,7 @@ FFM is depending on Mojo-Webqq, you need install [Mojo-WebQQ](https://github.com
 
 ## Get Server
 You need [install Node.js with npm](https://nodejs.org/en/download/package-manager) at first.
-And get server cilent files by git. Then, runing node:
+And get server cilent files by git. Then, install dependent modules runing node:
 
 ```Shell
 git clone https://github.com/RikkaW/FCM-for-Mojo.git && mv FCM-for-Mojo/server ffm-server
@@ -37,7 +37,7 @@ Congratulation, HTTP FFM server running now at basic mode now!
 But that's not finished yet, we need something to protect your messages.
 
 ### HTTP Basic Authorization
-Install node module ```http-auth``` at first:
+Install dependent module ```http-auth``` at first:
 
 ```Shell
 npm install http-auth
