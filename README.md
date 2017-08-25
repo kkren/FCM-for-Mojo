@@ -87,7 +87,7 @@ and del annotation (```/*``` and ```*/```) near that's line:
 
 Run ```node node/index.js```. FFM server running now!
 
-You can find out more usage about the config.conf in [wiki](/wiki/usage-of-config).
+You can find out more usage about the ```config.conf``` in [wiki](/wiki/usage-of-config).
 
 ## Nginx
 
