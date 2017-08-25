@@ -17,13 +17,13 @@ curl -fsSL get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-然后参照[kotomei 的说明](https://github.com/kotomei/fcm-for-mojo/blob/master/README.md)安装即可
+然后参照 [kotomei 的说明](https://github.com/kotomei/fcm-for-mojo/blob/master/README.md)安装即可
 
 # 极客
 ## Mojo-Webqq
 FFM 依赖于 Mojo Webqq，所以你必须先安装好它。
 
-[查看安装教程](https://github.com/sjdy521/Mojo-Webqq)
+[安装教程](https://github.com/sjdy521/Mojo-Webqq)
 
 ## 你是……
 [Node.js 用户](#Node.js)
@@ -70,7 +70,7 @@ Verifying - Password:
 ### HTTPS
 注意，你需要有 **SSL 证书**才能设置 HTTPS。
 
-编辑 ```config.js```，找到有 ```https``` 的那几行并去掉附近的注视（即 ```/*``` 和 ```*/```）：
+编辑 ```config.js```，找到有 ```https``` 的那几行并去掉附近的注释（即 ```/*``` 和 ```*/```）：
 ```js
 	"https": {
 			"key": fs.readFileSync("<证书私钥路径>"),
