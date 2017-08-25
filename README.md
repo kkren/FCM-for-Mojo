@@ -23,8 +23,8 @@ Then, install it with [kotomei's guilde](https://github.com/kotomei/fcm-for-mojo
 FFM is depending on Mojo-Webqq, you need install [Mojo-WebQQ](https://github.com/sjdy521/Mojo-Webqq) at first.
 
 ## Get Server
-You need [install Node.js with npm](https://nodejs.org/en/download/package-manager) and git at first.
-And get server cilent files by git. Then, install dependent modules runing node:
+You need [install Node.js with npm](https://nodejs.org/en/download/package-manager) and Git at first.
+And get server cilent files by Git. Then, install dependent modules runing node:
 
 ```Shell
 git clone https://github.com/RikkaW/FCM-for-Mojo.git && mv FCM-for-Mojo/server ffm-server
