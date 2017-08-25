@@ -81,14 +81,14 @@ and del annotation (```/*``` and ```*/```) near that's line:
 	"https": {
 			"key": "/path/to/privkey.pem",
 			/* Add ca-cert here if you have
-			"ca": "./keys/ca-cert.pem" */
+			"ca": "/path/to/ca-cert.pem" */
 			"cert": "/path/to/fullchain-or-server-cert.pem"
 		}
 ```
 
 Run ```node node/index.js```. FFM server running now!
 
-You can find out more usage about the ```config.conf``` in [wiki](/wiki/usage-of-config).
+PS: You can find out more usage about the ```config.conf``` in [wiki](/wiki/usage-of-config).
 
 ## Nginx
 
