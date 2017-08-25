@@ -38,7 +38,10 @@ But that's not finished yet, we need something to protect your messages.
 
 ### HTTP Basic Authorization
 Install node module ```http-auth``` at first:
-```npm install http-auth```
+
+```Shell
+npm install http-auth
+```
 
 Generate a password with openssl:
 
