@@ -10,9 +10,14 @@
 [极客](#极客)
 
 # 小白
-只需一行命令，回答几个问题：
+按照[官方教程](https://www.docker.com/community-edition)，一键安装 [Docker]
 
-*等 @kotomei 搞好 Dockerfile*
+```Shell
+curl -fsSL get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+```
+
+然后参照[kotomei 的说明](https://github.com/kotomei/fcm-for-mojo/blob/master/README.md)安装即可
 
 # 极客
 ## Mojo-Webqq
@@ -79,4 +84,5 @@ Verifying - Password:
 运行 ```node node/index.js```，享受 FFM！
 
 ## Nginx
-*等待 Perl Nginx 模块完成*
+*此坑待填，还是按照 Node.js 弄吧*
+
