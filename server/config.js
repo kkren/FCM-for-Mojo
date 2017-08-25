@@ -20,7 +20,7 @@ var config = {
     // hostname, 0.0.0.0 default (IPv4)
     /*"hostname": "",*/
 
-    // basic auth config, see https://github.com/http-auth/http-auth#configurations
+    // basic auth config, see https://github.com/http-auth/http-auth#configuration
     /*"basic_auth": {
         "file": ""
     },*/
