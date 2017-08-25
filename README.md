@@ -79,10 +79,10 @@ and del annotation (```/*``` and ```*/```) near that's line:
 
 ```js
 	"https": {
-			"key": "/path/to/privkey.pem",
+			"key": fs.readFileSync("/path/to/privkey.pem"),
 			/* Add ca-cert here if you have
-			"ca": "/path/to/ca-cert.pem" */
-			"cert": "/path/to/fullchain-or-server-cert.pem"
+			"ca": fs.readFileSync("/path/to/ca-cert.pem"), */
+			"cert": fs.readFileSync("/path/to/fullchain-or-server-cert.pem")
 		}
 ```
 
