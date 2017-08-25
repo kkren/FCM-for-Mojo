@@ -1,6 +1,5 @@
 # FCM for Mojo
 Push QQ Messages to Android devices with [Mojo-WebQQ](https://github.com/sjdy521/Mojo-Webqq).
-
 Design for Android 7.0+ specially, full use Android notification feature (Reply in notification and bundled notifications, etc.)
 
 [简体中文](/README_zh.md)
@@ -11,11 +10,14 @@ Design for Android 7.0+ specially, full use Android notification feature (Reply 
 [Geek](#Geek)
 
 # Noob
-Just input one command, and anwser some question.
+As [official installtion guilde](https://www.docker.com/community-edition), install [Docker](https://www.docker.com) by one command.
 
-*Waiting @kotomei build Dockerfile*
+```Shell
+curl -fsSL get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+```
 
-Return to FFM cilent to finish the last step.
+Then, install as [kotomei's guilde](https://github.com/kotomei/fcm-for-mojo/blob/master/README.md).
 
 # Geek
 ## Mojo-Webqq
@@ -35,12 +37,11 @@ You need [install Node.js](https://nodejs.org/en/download/package-manager) at fi
 And get server cilent files by git. Then, runing node:
 
 ```Shell
-git clone https://github.com/RikkaW/FCM-for-Mojo.git
-mv FCM-for-Mojo/server ffm-server
-cd ffm-server
+git clone https://github.com/RikkaW/FCM-for-Mojo.git && mv FCM-for-Mojo/server ffm-server
+cd ffm-server && node node/index.js
 ```
 
-Congratulation, HTTP FFM server can be run now!
+Congratulation, HTTP FFM server running now at basic mode now!
 But that's not finished yet, we need something to protect your messages.
 
 ### HTTP Basic Authorization
@@ -82,12 +83,4 @@ Next step: [configure your FFM cilent](#Cilent).
 
 ## Nginx
 
-*Waiting for Perl Nginx module finish*
-
-
-~~# Cilent
-After FFM server started, you need configure your cilent.
-Open FFM, click "Server settings. Then, click "Server URL".
-Input server URL and click "show advanced option", input username and password. Click "OK" when you finish.
-Back to last interface, click "Manage devices". Then, click "+" button at upper right corner.
-Click "upload", done!~~
+*TODO, please install by Node.js method now```
