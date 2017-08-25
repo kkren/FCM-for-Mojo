@@ -73,10 +73,10 @@ Verifying - Password:
 编辑 ```config.js```，找到有 ```https``` 的那几行并去掉附近的注视（即 ```/*``` 和 ```*/```）：
 ```js
 	"https": {
-			"key": "<证书私钥路径>",
+			"key": fs.readFileSync("<证书私钥路径>"),
 			/* 如果你有 CA 证书，就加上这行
-			"ca": "<CA 证书路径>", */
-			"cert": "<含完整证书链证书（fullchain）或服务端证书（server cert）的路径>"
+			"ca": fs.readFileSync("<CA 证书路径>"), */
+			"cert": fs.readFileSync("<含完整证书链证书（fullchain）或服务端证书（server cert）的路径>")
 		}
 ```
 
