@@ -25,12 +25,7 @@ FFM 依赖于 Mojo Webqq，所以你必须先安装好它。
 
 [安装教程](https://github.com/sjdy521/Mojo-Webqq)
 
-## 你是……
-[Node.js 用户](#Node.js)
-
-[Nginx 用户](#Nginx)
-
-## Node.js
+## 获取服务端
 我们推荐使用 Node.js。
 
 你需要先[安装 Node.js](https://nodejs.org/en/download/package-manager)。
@@ -83,7 +78,3 @@ Verifying - Password:
 运行 ```node node/index.js```，并[下载客户端](https://github.com/RikkaW/FCM-for-Mojo/releases)，完成最后的配置即可！
 
 注：你可以在 [wiki](https://github.com/RikkaW/FCM-for-Mojo/wiki/配置文件的用法) 中找到更多用法。
-
-## Nginx
-*此坑待填，还是按照 Node.js 弄吧*
-
