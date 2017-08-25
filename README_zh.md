@@ -4,12 +4,10 @@
 
 [English](/README.md)
 
-# 入门
-[小白](#小白)
+# Docker
+Docker 更加易于安装，配置的步骤较少
 
-[极客](#极客)
-
-# 小白
+你需要先安装 [Docker](https://www.docker.com/)，如果还没有，
 按照[官方教程](https://www.docker.com/community-edition)，一键安装 [Docker](https://www.docker.com)
 
 ```Shell
@@ -19,11 +17,9 @@ sudo sh get-docker.sh
 
 然后参照 [kotomei 的说明](https://github.com/kotomei/fcm-for-mojo/blob/master/README.md)安装即可
 
-# 极客
+# 自行配置
 ## Mojo-Webqq
-FFM 依赖于 Mojo Webqq，所以你必须先安装好它。
-
-[安装教程](https://github.com/sjdy521/Mojo-Webqq)
+FFM 依赖于 Mojo Webqq，所以你必须先[安装好 Mojo WebQQ](https://github.com/sjdy521/Mojo-Webqq)
 
 ## 获取服务端
 我们推荐使用 Node.js。
