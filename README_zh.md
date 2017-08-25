@@ -41,7 +41,7 @@ git clone https://github.com/RikkaW/FCM-for-Mojo.git && mv FCM-for-Mojo/server f
 cd ffm-server && node node/index.js
 ```
 
-恭喜，你已经跑起了一个最基础的服务！
+恭喜，你已经跑起了一个 HTTP FFM 服务！
 但这还没结束，我们需要用一些东西保护你的信息。
 
 ### HTTP 基本认证
