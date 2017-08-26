@@ -70,7 +70,7 @@ Run ```node node/index.js```. [download cilent](https://github.com/RikkaW/FCM-fo
 
 PS: You can find out more usage about the ```config.conf``` in [wiki](https://github.com/RikkaW/FCM-for-Mojo/wiki/usage-of-config).
 
-# License
+# [License](/LICENSE)
 ```
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
