@@ -30,7 +30,7 @@ FFM 依赖于 Mojo Webqq，所以你必须先[安装好 Mojo WebQQ](https://gith
 ```Shell
 git clone https://github.com/RikkaW/FCM-for-Mojo.git && mv FCM-for-Mojo/server ffm-server
 rm -rf FCM-for-Mojo && cd ffm-server
-npm install http-proxy carrier
+npm install http-proxy carrier request
 node node/index.js
 ```
 
