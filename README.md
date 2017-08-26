@@ -29,7 +29,7 @@ And get server cilent files by Git. Then, install dependent modules runing node:
 ```Shell
 git clone https://github.com/RikkaW/FCM-for-Mojo.git && mv FCM-for-Mojo/server ffm-server
 rm -rf FCM-for-Mojo && cd ffm-server
-npm install http-proxy carrier
+npm install http-proxy carrier request
 node node/index.js
 ```
 
