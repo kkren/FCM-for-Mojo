@@ -5,17 +5,7 @@
 [English](/README.md)
 
 # Docker
-Docker 更加易于安装，配置的步骤较少
-
-你需要先安装 [Docker](https://www.docker.com/)，如果还没有，
-按照[官方教程](https://www.docker.com/community-edition)，使用脚本安装 [Docker](https://www.docker.com)：
-
-```Shell
-curl -fsSL get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
-```
-
-然后参照 [kotomei 的说明](https://github.com/kotomei/fcm-for-mojo/blob/master/README.md)安装即可
+通过 Docker 方式安装 FFM 十分简单.按照 [kotomei 的教程](https://github.com/kotomei/fcm-for-mojo/blob/master/README.md)，你只需几分钟就可以搞定。
 
 # 自行配置
 ## Mojo-Webqq
