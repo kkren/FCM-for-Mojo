@@ -66,3 +66,19 @@ Verifying - Password:
 运行 ```node node/index.js```，并[下载客户端](https://github.com/RikkaW/FCM-for-Mojo/releases)，完成最后的配置即可！
 
 注：你可以在 [wiki](https://github.com/RikkaW/FCM-for-Mojo/wiki/配置文件的用法) 中找到更多用法。
+
+# [License](/LICENSE)
+```
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+```
