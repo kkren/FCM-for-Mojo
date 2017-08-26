@@ -6,17 +6,7 @@ Design for Android 7.0+ specially, full use Android notification feature
 [简体中文](/README_zh.md)
 
 # Docker
-You need [Docker](https://www.docker.com) installed at first.
-
-If  not, as [official installtion guilde](https://www.docker.com/community-edition), 
-install [Docker](https://www.docker.com) by script.
-
-```Shell
-curl -fsSL get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
-```
-
-Then, install it with [kotomei's guilde](https://github.com/kotomei/fcm-for-mojo/blob/master/README.md).
+Docker is a simple way to try FFM, you can install it accroding to [kotomei's guilde](https://github.com/kotomei/FCM-for-Mojo).
 
 # Step by Step
 ## Mojo-Webqq
