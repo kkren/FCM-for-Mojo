@@ -19,8 +19,8 @@ FFM 依赖于 Mojo Webqq，所以你必须先[安装好 Mojo WebQQ](https://gith
 
 ```Shell
 git clone https://github.com/RikkaW/FCM-for-Mojo.git && mv FCM-for-Mojo/server ffm-server
-rm -rf FCM-for-Mojo && cd ffm-server
-npm install http-proxy carrier request
+rm -rf FCM-for-Mojo && cd ffm-server/node
+npm install && cd ..
 node node/index.js
 ```
 
@@ -28,12 +28,6 @@ node node/index.js
 但这还没结束，我们需要用一些东西保护你的信息。
 
 ### HTTP 基本认证
-首先先安装依赖模块 ```http-auth```
-
-```Shell
-npm install http-auth
-```
-
 通过 OpenSSL，用密码来生成一个 MD5
 
 ```Shell
