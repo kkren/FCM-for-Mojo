@@ -6,7 +6,7 @@ Design for Android 7.0+ specially, full use Android notification feature
 [简体中文](/README_zh.md)
 
 # Docker
-Docker is a simple way to try FFM, you can install it accroding to [kotomei's guilde](https://github.com/kotomei/FCM-for-Mojo).
+It's very easy to install FFM by Docker. With [kotomei's guilde](https://github.com/kotomei/FCM-for-Mojo), you could finish it in a few minutes.
 
 # Step by Step
 ## Mojo-Webqq
