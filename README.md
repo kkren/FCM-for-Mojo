@@ -14,7 +14,7 @@ FFM is depending on Mojo-Webqq, you need install [Mojo-WebQQ](https://github.com
 
 ## Get Server
 You need [install Node.js with npm](https://nodejs.org/en/download/package-manager) and Git at first.
-And get server cilent files from [releases](https://github.com/RikkaW/FCM-for-Mojo/releases). Then, install dependent modules runing node:
+And get server files from [releases](https://github.com/RikkaW/FCM-for-Mojo/releases). Then, install dependent modules runing node:
 
 ```Shell
 mkdir ffm && cd ffm
