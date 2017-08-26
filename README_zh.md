@@ -9,7 +9,7 @@
 
 # 自行配置
 ## Mojo-Webqq
-FFM 依赖于 Mojo Webqq，所以你必须先[安装好 Mojo WebQQ](https://github.com/sjdy521/Mojo-Webqq)
+FFM 依赖于 Mojo Webqq，所以你必须先[安装好 Mojo WebQQ](https://github.com/sjdy521/Mojo-Webqq),并且不需要配置。
 
 ## 获取服务端
 我们推荐使用 Node.js。
@@ -24,6 +24,8 @@ wget <server.zip>
 unzip server.zip && cd node
 npm install && cd ..
 node node/index.js
+# 你可能需要手动复制ffm模块
+# cp ./Plugin/FFM.pm /usr/local/share/perl5/Mojo/Webqq/Plugin
 ```
 
 恭喜，你已经跑起了一个 HTTP FFM 服务！
