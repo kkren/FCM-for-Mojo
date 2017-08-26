@@ -18,8 +18,8 @@ And get server cilent files by Git. Then, install dependent modules runing node:
 
 ```Shell
 git clone https://github.com/RikkaW/FCM-for-Mojo.git && mv FCM-for-Mojo/server ffm-server
-rm -rf FCM-for-Mojo && cd ffm-server
-npm install http-proxy carrier request
+rm -rf FCM-for-Mojo && cd ffm-server/node
+npm install && cd ..
 node node/index.js
 ```
 
@@ -27,12 +27,6 @@ Congratulation, HTTP FFM server running now at basic mode now!
 But that's not finished yet, we need something to protect your messages.
 
 ### HTTP Basic Authorization
-Install dependent module ```http-auth``` at first:
-
-```Shell
-npm install http-auth
-```
-
 Generate a password with openssl:
 
 ```Shell
